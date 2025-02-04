@@ -189,7 +189,7 @@ func (v Value) marshalArray() []byte {
 	bytes = append(bytes, CRLF...)
 
 	for _, v := range v.array {
-		bytes = append(bytes, v.marshalArray()...)
+		bytes = append(bytes, v.Marshal()...)
 	}
 
 	return bytes
